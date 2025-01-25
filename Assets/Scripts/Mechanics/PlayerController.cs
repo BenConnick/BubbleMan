@@ -26,9 +26,10 @@ namespace Platformer.Mechanics
         /// Initial jump velocity at the start of a jump.
         /// </summary>
         public float jumpTakeOffSpeed = 10;
+        public float jumpHangForce = 10;
 
         public JumpState jumpState = JumpState.Grounded;
-        private bool stopJump;
+        private bool jumpButtonHeldDown;
         /*internal new*/ public Collider2D collider2d;
         /*internal new*/ public AudioSource audioSource;
         public Health health;
@@ -57,10 +58,13 @@ namespace Platformer.Mechanics
             {
                 move.x = Input.GetAxis("Horizontal");
                 if (jumpState == JumpState.Grounded && Input.GetButtonDown("Jump"))
+                {
                     jumpState = JumpState.PrepareToJump;
+                    jumpButtonHeldDown = true;
+                }
                 else if (Input.GetButtonUp("Jump"))
                 {
-                    stopJump = true;
+                    jumpButtonHeldDown = false;
                     Schedule<PlayerStopJump>().player = this;
                 }
             }
@@ -80,7 +84,6 @@ namespace Platformer.Mechanics
                 case JumpState.PrepareToJump:
                     jumpState = JumpState.Jumping;
                     jump = true;
-                    stopJump = false;
                     break;
                 case JumpState.Jumping:
                     if (!IsGrounded)
@@ -98,23 +101,34 @@ namespace Platformer.Mechanics
                     break;
                 case JumpState.Landed:
                     jumpState = JumpState.Grounded;
+                    jumpButtonHeldDown = false;
                     break;
             }
         }
 
         protected override void ComputeVelocity()
         {
-            if (jump && IsGrounded)
+            if (IsGrounded)
             {
-                velocity.y = jumpTakeOffSpeed * model.jumpModifier;
-                jump = false;
-            }
-            else if (stopJump)
-            {
-                stopJump = false;
-                if (velocity.y > 0)
+                if (jump)
                 {
-                    velocity.y = velocity.y * model.jumpDeceleration;
+                    velocity.y = jumpTakeOffSpeed * model.jumpModifier;
+                    jump = false;
+                }
+            }
+            else
+            {
+                if (jumpButtonHeldDown)
+                {
+                    
+                    {
+                        float hangPower = Mathf.Clamp(jumpHangForce + velocity.y, 0, jumpHangForce);
+                        velocity.y += hangPower * model.jumpModifier * Time.deltaTime;
+                    }
+                }
+                else
+                {
+                    base.ComputeVelocity();
                 }
             }
 
