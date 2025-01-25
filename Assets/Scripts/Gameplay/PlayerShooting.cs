@@ -21,7 +21,7 @@ public class PlayerShooting : MonoBehaviour
        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
        
        // Determine shooting direction.
-       Vector2 direction = transform.localScale.x > 0 ? Vector2.left : Vector2.right;
+       Vector2 direction = transform.localScale.x > 0 ? Vector2.right : Vector2.left;
        
        // set velocity 
        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
