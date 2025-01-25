@@ -1,10 +1,14 @@
 using System;
 using System.Collections;
+using Platformer.Core;
+using Platformer.Gameplay;
+using Platformer.Mechanics;
 using UnityEngine;
 
 public class BubbleProjectile : MonoBehaviour
 {
     public GameObject PopVFXPrefab;
+    public GameObject EnemyPickupPrefab;
 
     public float FloatForce;
     
@@ -51,9 +55,13 @@ public class BubbleProjectile : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Enemy")
+        var enemy = collision.collider.GetComponentInChildren<EnemyController>();
+        if (enemy != null)
         {
-            Debug.Log("Bubble hit enemy: " + collision.collider.name);
+            Destroy(enemy.gameObject);
+            var pickup = Instantiate(EnemyPickupPrefab, enemy.transform.position, Quaternion.identity);
+            pickup.GetComponent<EnemyPickup>().SetEnemy(enemy.gameObject);
+            Destroy(gameObject);
         }
     }
 

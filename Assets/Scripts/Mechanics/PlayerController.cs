@@ -35,6 +35,8 @@ namespace Platformer.Mechanics
         public Health health;
         public bool controlEnabled = true;
         public float horizontalInertiaInAir = 1;
+        
+        public TypeRPS RockPaperScissorsType = TypeRPS.Rock;
 
         bool jump;
         Vector2 move;

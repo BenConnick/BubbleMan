@@ -335,5 +335,5 @@ MonoBehaviour:
   bubblePrefab: {fileID: 7408123404780718201, guid: 81ec0ea30aa5c4e50875b0c746f9d6d1,
     type: 3}
   bubbleSpeed: 3
-  upwardForce: 2
-  firePointOffset: 1.5
+  upwardForce: -0.1
+  firePointOffset: 0.25
