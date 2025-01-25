@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 50915408107096866}
   - component: {fileID: 8509783501685719824}
   - component: {fileID: 6082575806313374961}
-  - component: {fileID: 2974758969921397914}
+  - component: {fileID: 8973174470424801648}
   m_Layer: 13
   m_Name: Player
   m_TagString: Player
@@ -51,19 +51,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minGroundNormalY: 0.9
-  gravityModifier: 3
+  gravityModifier: 5
   velocity: {x: 0, y: 0}
   jumpAudio: {fileID: 8300000, guid: 67975c08d56ceb147bad38572d805aa8, type: 3}
   respawnAudio: {fileID: 8300000, guid: e18959d46b63f3c4c8cc020a433cf848, type: 3}
   ouchAudio: {fileID: 8300000, guid: 6c05149e5a2fba64ba172e25a61074b7, type: 3}
-  maxSpeed: 3
-  jumpTakeOffSpeed: 8
-  jumpHangForce: 16
+  maxSpeed: 6
+  jumpTakeOffSpeed: 10
+  jumpHangForce: 32
   jumpState: 0
-  collider2d: {fileID: 2974758969921397914}
+  collider2d: {fileID: 8973174470424801648}
   audioSource: {fileID: 0}
   health: {fileID: 0}
   controlEnabled: 1
+  horizontalInertiaInAir: 1
 --- !u!212 &212064061491315838
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -273,8 +274,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 1
---- !u!70 &2974758969921397914
-CapsuleCollider2D:
+--- !u!61 &8973174470424801648
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -305,6 +306,16 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.09, y: -0.13}
-  m_Size: {x: 0.37, y: 0.57}
-  m_Direction: 0
+  m_Offset: {x: -0.09, y: -0.09}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 1.26}
+    newSize: {x: 1.28, y: 1.26}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.64}
+  m_EdgeRadius: 0

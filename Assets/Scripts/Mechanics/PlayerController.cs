@@ -67,12 +67,12 @@ namespace Platformer.Mechanics
                     move.x = Mathf.Lerp(move.x, target, Time.deltaTime * 60/horizontalInertiaInAir * Mathf.Abs(target - move.x));
                 }
 
-                if (jumpState == JumpState.Grounded && Input.GetButtonDown("Jump"))
+                if (jumpState == JumpState.Grounded && Input.GetAxis("Vertical") > 0)
                 {
                     jumpState = JumpState.PrepareToJump;
                     jumpButtonHeldDown = true;
                 }
-                else if (Input.GetButtonUp("Jump"))
+                else if (Input.GetAxis("Vertical") <= 0)
                 {
                     jumpButtonHeldDown = false;
                     Schedule<PlayerStopJump>().player = this;
