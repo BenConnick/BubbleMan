@@ -52,8 +52,8 @@ public class EnemyPickup : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            other.GetComponent<RockPaperScissorsComponent>().Value = Type.Value;
             Destroy(gameObject); 
-            
         }
     }
 }
