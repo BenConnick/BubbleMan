@@ -23,7 +23,7 @@ public class PlayerShooting : MonoBehaviour
         GameObject bubble = Instantiate(bubblePrefab, firePoint.position, Quaternion.identity);
         
         //Determine the direction based on the players direction.
-        Vector2 direction = transform.localScale.x > 0 ? Vector2.right : Vector2.left;
+        Vector2 direction = GetComponent<SpriteRenderer>().flipX ? Vector2.right : Vector2.left;
         
         // Add a slightly upward movement to the velocity.
         Vector2 bubbleVelocity = (direction * bubbleSpeed) + (Vector2.up * upwardForce);

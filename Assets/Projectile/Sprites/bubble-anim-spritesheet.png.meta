@@ -102,8 +102,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 86.25
-        height: 90
+        width: 17.25
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,10 +121,10 @@ TextureImporter:
       name: bubble-anim-spritesheet_1
       rect:
         serializedVersion: 2
-        x: 86
+        x: 17
         y: 0
-        width: 86.25
-        height: 90
+        width: 17.25
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,10 +142,10 @@ TextureImporter:
       name: bubble-anim-spritesheet_2
       rect:
         serializedVersion: 2
-        x: 172
+        x: 34
         y: 0
-        width: 86.25
-        height: 90
+        width: 17.25
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,10 +163,10 @@ TextureImporter:
       name: bubble-anim-spritesheet_3
       rect:
         serializedVersion: 2
-        x: 258
+        x: 51
         y: 0
-        width: 86.25
-        height: 90
+        width: 17.25
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
