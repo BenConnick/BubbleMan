@@ -12,7 +12,7 @@ Changelog
 ### Fixed
 - Removed reference to now deprecated mods
 
-## [4.0.3] - 2024-08-28
+## [4.0.3] - 2024-08-27
 
 ### Fixed
 - Added dependency to 2d feature so the Sprite editor is installed by default
