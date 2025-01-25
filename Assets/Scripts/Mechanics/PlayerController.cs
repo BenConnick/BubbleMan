@@ -34,6 +34,7 @@ namespace Platformer.Mechanics
         /*internal new*/ public AudioSource audioSource;
         public Health health;
         public bool controlEnabled = true;
+        public float horizontalInertiaInAir = 1;
 
         bool jump;
         Vector2 move;
@@ -56,7 +57,16 @@ namespace Platformer.Mechanics
         {
             if (controlEnabled)
             {
-                move.x = Input.GetAxis("Horizontal");
+                if (jumpState == JumpState.Grounded || horizontalInertiaInAir == 0)
+                {
+                    move.x = Input.GetAxis("Horizontal");
+                }
+                else
+                {
+                    float target = Input.GetAxis("Horizontal");
+                    move.x = Mathf.Lerp(move.x, target, Time.deltaTime * 60/horizontalInertiaInAir * Mathf.Abs(target - move.x));
+                }
+
                 if (jumpState == JumpState.Grounded && Input.GetButtonDown("Jump"))
                 {
                     jumpState = JumpState.PrepareToJump;
