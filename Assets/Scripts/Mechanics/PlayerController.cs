@@ -25,14 +25,16 @@ namespace Platformer.Mechanics
         /// <summary>
         /// Initial jump velocity at the start of a jump.
         /// </summary>
-        public float jumpTakeOffSpeed = 7;
+        public float jumpTakeOffSpeed = 10;
+        public float jumpHangForce = 10;
 
         public JumpState jumpState = JumpState.Grounded;
-        private bool stopJump;
+        private bool jumpButtonHeldDown;
         /*internal new*/ public Collider2D collider2d;
         /*internal new*/ public AudioSource audioSource;
         public Health health;
         public bool controlEnabled = true;
+        public float horizontalInertiaInAir = 1;
 
         bool jump;
         Vector2 move;
@@ -55,12 +57,24 @@ namespace Platformer.Mechanics
         {
             if (controlEnabled)
             {
-                move.x = Input.GetAxis("Horizontal");
-                if (jumpState == JumpState.Grounded && Input.GetButtonDown("Jump"))
-                    jumpState = JumpState.PrepareToJump;
-                else if (Input.GetButtonUp("Jump"))
+                if (jumpState == JumpState.Grounded || horizontalInertiaInAir == 0)
                 {
-                    stopJump = true;
+                    move.x = Input.GetAxis("Horizontal");
+                }
+                else
+                {
+                    float target = Input.GetAxis("Horizontal");
+                    move.x = Mathf.Lerp(move.x, target, Time.deltaTime * 60/horizontalInertiaInAir * Mathf.Abs(target - move.x));
+                }
+
+                if (jumpState == JumpState.Grounded && Input.GetAxis("Vertical") > 0)
+                {
+                    jumpState = JumpState.PrepareToJump;
+                    jumpButtonHeldDown = true;
+                }
+                else if (Input.GetAxis("Vertical") <= 0)
+                {
+                    jumpButtonHeldDown = false;
                     Schedule<PlayerStopJump>().player = this;
                 }
             }
@@ -80,7 +94,6 @@ namespace Platformer.Mechanics
                 case JumpState.PrepareToJump:
                     jumpState = JumpState.Jumping;
                     jump = true;
-                    stopJump = false;
                     break;
                 case JumpState.Jumping:
                     if (!IsGrounded)
@@ -98,23 +111,34 @@ namespace Platformer.Mechanics
                     break;
                 case JumpState.Landed:
                     jumpState = JumpState.Grounded;
+                    jumpButtonHeldDown = false;
                     break;
             }
         }
 
         protected override void ComputeVelocity()
         {
-            if (jump && IsGrounded)
+            if (IsGrounded)
             {
-                velocity.y = jumpTakeOffSpeed * model.jumpModifier;
-                jump = false;
-            }
-            else if (stopJump)
-            {
-                stopJump = false;
-                if (velocity.y > 0)
+                if (jump)
                 {
-                    velocity.y = velocity.y * model.jumpDeceleration;
+                    velocity.y = jumpTakeOffSpeed * model.jumpModifier;
+                    jump = false;
+                }
+            }
+            else
+            {
+                if (jumpButtonHeldDown)
+                {
+                    
+                    {
+                        float hangPower = Mathf.Clamp(jumpHangForce + velocity.y, 0, jumpHangForce);
+                        velocity.y += hangPower * model.jumpModifier * Time.deltaTime;
+                    }
+                }
+                else
+                {
+                    base.ComputeVelocity();
                 }
             }
 
