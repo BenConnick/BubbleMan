@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 50915408107096866}
   - component: {fileID: 8509783501685719824}
   - component: {fileID: 8973174470424801648}
+  - component: {fileID: 7413783519842839004}
   m_Layer: 13
   m_Name: Player
   m_TagString: Player
@@ -319,3 +320,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3, y: 0.64}
   m_EdgeRadius: 0
+--- !u!114 &7413783519842839004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208144871472054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 063957c93812848b1a67a3b88c811c15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubblePrefab: {fileID: 7408123404780718201, guid: 81ec0ea30aa5c4e50875b0c746f9d6d1,
+    type: 3}
+  firePoint: {fileID: 0}
+  bubbleSpeed: 3
+  upwardForce: 2
+  firePointOffset: 1.5
