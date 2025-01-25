@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 50915408107096866}
   - component: {fileID: 8509783501685719824}
   - component: {fileID: 8973174470424801648}
+  - component: {fileID: 7413783519842839004}
   m_Layer: 13
   m_Name: Player
   m_TagString: Player
@@ -51,14 +52,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minGroundNormalY: 0.9
-  gravityModifier: 5
+  gravityModifier: 3
   velocity: {x: 0, y: 0}
   jumpAudio: {fileID: 8300000, guid: 67975c08d56ceb147bad38572d805aa8, type: 3}
   respawnAudio: {fileID: 8300000, guid: e18959d46b63f3c4c8cc020a433cf848, type: 3}
   ouchAudio: {fileID: 8300000, guid: 6c05149e5a2fba64ba172e25a61074b7, type: 3}
-  maxSpeed: 6
-  jumpTakeOffSpeed: 10
-  jumpHangForce: 32
+  maxSpeed: 4
+  jumpTakeOffSpeed: 6
+  jumpHangForce: 20
   jumpState: 0
   collider2d: {fileID: 8973174470424801648}
   audioSource: {fileID: 0}
@@ -306,16 +307,33 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.09, y: -0.09}
+  m_Offset: {x: -0.03, y: -0.09}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.26}
+    oldSize: {x: 0.64, y: 0.63}
     newSize: {x: 1.28, y: 1.26}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.64}
+  m_Size: {x: 0.2, y: 0.22}
   m_EdgeRadius: 0
+--- !u!114 &7413783519842839004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208144871472054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 063957c93812848b1a67a3b88c811c15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubblePrefab: {fileID: 7408123404780718201, guid: 81ec0ea30aa5c4e50875b0c746f9d6d1,
+    type: 3}
+  bubbleSpeed: 3
+  upwardForce: 2
+  firePointOffset: 1.5
