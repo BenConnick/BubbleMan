@@ -136,6 +136,30 @@ PrefabInstance:
       propertyPath: MinDistance
       value: 0.98825693
       objectReference: {fileID: 0}
+    - target: {fileID: 8755034280077496329, guid: f158aa2be3df6489185ef721f6fd79c1,
+        type: 3}
+      propertyPath: AnimatorsByType.Array.data[0]
+      value: 
+      objectReference: {fileID: 22100000, guid: e7616be7927974d449ed15cc15c125b9,
+        type: 2}
+    - target: {fileID: 8755034280077496329, guid: f158aa2be3df6489185ef721f6fd79c1,
+        type: 3}
+      propertyPath: AnimatorsByType.Array.data[1]
+      value: 
+      objectReference: {fileID: 22100000, guid: 20b632e6f12294e0a82b8ea29ff2d519,
+        type: 2}
+    - target: {fileID: 8755034280077496329, guid: f158aa2be3df6489185ef721f6fd79c1,
+        type: 3}
+      propertyPath: AnimatorsByType.Array.data[2]
+      value: 
+      objectReference: {fileID: 22100000, guid: b6e09deddf9f84571a35b15873cb08bf,
+        type: 2}
+    - target: {fileID: 8755034280077496329, guid: f158aa2be3df6489185ef721f6fd79c1,
+        type: 3}
+      propertyPath: AnimatorsByType.Array.data[3]
+      value: 
+      objectReference: {fileID: 22100000, guid: c14722dd712094f399649c5f2c67a692,
+        type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -148,10 +172,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2088657649121752336}
-    - targetCorrespondingSourceObject: {fileID: 1661912868639658944, guid: f158aa2be3df6489185ef721f6fd79c1,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6039859796642535853}
   m_SourcePrefab: {fileID: 100100000, guid: f158aa2be3df6489185ef721f6fd79c1, type: 3}
 --- !u!4 &1525789489571413623 stripped
 Transform:
@@ -182,19 +202,3 @@ MonoBehaviour:
   launchForce: 10
   launchDirection: {x: 1, y: 1}
   offset: {x: 0, y: 1}
---- !u!114 &6039859796642535853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1529241449558149009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a0da40b34c04896ae67be801b0e43f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AnimatorsByType:
-  - {fileID: 22100000, guid: b6e09deddf9f84571a35b15873cb08bf, type: 2}
-  - {fileID: 22100000, guid: b6e09deddf9f84571a35b15873cb08bf, type: 2}
-  - {fileID: 22100000, guid: b6e09deddf9f84571a35b15873cb08bf, type: 2}
