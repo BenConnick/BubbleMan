@@ -333,6 +333,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AnimatorsByType:
   - {fileID: 22100000, guid: 778ac879b884e47d1aa0c8a1c130cc8a, type: 2}
-  - {fileID: 22100000, guid: ab1b8c9a8343b4a7ea4e9d5d3f11b8f5, type: 2}
   - {fileID: 22100000, guid: 73beafb4e2c854f70a44fae550665965, type: 2}
+  - {fileID: 22100000, guid: ab1b8c9a8343b4a7ea4e9d5d3f11b8f5, type: 2}
   - {fileID: 22100000, guid: 26392808b85d04e6f954bafe665cc8e4, type: 2}
