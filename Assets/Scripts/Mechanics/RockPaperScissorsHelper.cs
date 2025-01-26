@@ -29,6 +29,25 @@ namespace Platformer.Mechanics
                     throw new ArgumentOutOfRangeException(nameof(a), a, null);
             }
         }
+        
+        public static TypeRPS Prev(this TypeRPS a)
+        {
+            switch (a)
+            {
+                case TypeRPS.None:
+                    return TypeRPS.None;
+                case TypeRPS.RockRed:
+                    return TypeRPS.ScissorsOrange;
+                case TypeRPS.PaperPurple:
+                    return TypeRPS.RockRed;
+                case TypeRPS.ScissorsOrange:
+                    return TypeRPS.PaperPurple;
+                case TypeRPS.Yellow:
+                    return TypeRPS.Yellow;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(a), a, null);
+            }
+        }
 
         public static Color GetHalfColor(this TypeRPS a)
         {
