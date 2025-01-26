@@ -16,6 +16,8 @@ public class BubbleProjectile : MonoBehaviour
 
     public float SpawnAnimationDuration = .2f;
 
+    private bool Quit;
+
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -47,9 +49,14 @@ public class BubbleProjectile : MonoBehaviour
         rb2d.AddForce(new Vector2(0, FloatForce), ForceMode2D.Force);
     }
 
+    public void OnApplicationQuit()
+    {
+        Quit = true;
+    }
+
     public void OnDestroy()
     {
-        if (Application.isPlaying == false) return;
+        if (Quit || Application.isPlaying == false) return;
         SpawnPop();
     }
 
@@ -58,9 +65,14 @@ public class BubbleProjectile : MonoBehaviour
         var enemy = collision.collider.GetComponentInChildren<EnemyController>();
         if (enemy != null)
         {
-            Destroy(enemy.gameObject);
-            var pickup = Instantiate(EnemyPickupPrefab, enemy.transform.position, Quaternion.identity);
-            pickup.GetComponent<EnemyPickup>().SetEnemy(enemy.gameObject);
+            var projectileType = GetComponent<RockPaperScissorsComponent>().Value;
+            var enemyType = enemy.GetComponent<RockPaperScissorsComponent>().Value;
+            if (projectileType.Beats(enemyType))
+            {
+                Destroy(enemy.gameObject);
+                var pickup = Instantiate(EnemyPickupPrefab, enemy.transform.position, Quaternion.identity);
+                pickup.GetComponent<EnemyPickup>().SetEnemy(enemy.gameObject);
+            }
             Destroy(gameObject);
         }
     }

@@ -1,4 +1,5 @@
 using System;
+using Platformer.Mechanics;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -32,6 +33,12 @@ public class PlayerShooting : MonoBehaviour
         
         // Apply the velocity to the RigidBody2D
         Rigidbody2D rb = bubble.GetComponent<Rigidbody2D>();
+
+        var typeRPSComp = bubble.GetComponent<RockPaperScissorsComponent>();
+        if (typeRPSComp != null)
+        {
+            typeRPSComp.Value = GetComponent<RockPaperScissorsComponent>().Value;
+        }
 
         if (rb != null)
         {

@@ -9,12 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5221622459674116932}
+  - component: {fileID: 4410060182846819643}
+  - component: {fileID: 1554545836559730893}
+  - component: {fileID: -827247870714783397}
   - component: {fileID: 5887694420492226793}
   - component: {fileID: 3208485245288379207}
   - component: {fileID: 7608476978581594322}
   - component: {fileID: 1074464942383192566}
-  - component: {fileID: 4410060182846819643}
-  - component: {fileID: -827247870714783397}
   m_Layer: 0
   m_Name: Bubble
   m_TagString: Untagged
@@ -37,6 +38,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4410060182846819643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7408123404780718201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6daa7e70b845546a986242aca05e5e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PopVFXPrefab: {fileID: 3339170624023697928, guid: da7322169693645a591304696c2b1b97,
+    type: 3}
+  EnemyPickupPrefab: {fileID: 7408123404780718201, guid: 4dbdaff406ed54f3d8ceaf7d8a5e6e9e,
+    type: 3}
+  FloatForce: 1
+  SpawnAnimationDuration: 0.2
+--- !u!114 &1554545836559730893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7408123404780718201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc77b2885a704460ad5e93e8c4864375, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Value: 0
+--- !u!114 &-827247870714783397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7408123404780718201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 857e6ba9e00a64d98ba6ff31c130ba0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Time: 2
 --- !u!212 &5887694420492226793
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -172,34 +217,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
---- !u!114 &4410060182846819643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7408123404780718201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6daa7e70b845546a986242aca05e5e15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PopVFXPrefab: {fileID: 3339170624023697928, guid: da7322169693645a591304696c2b1b97,
-    type: 3}
-  EnemyPickupPrefab: {fileID: 7408123404780718201, guid: 4dbdaff406ed54f3d8ceaf7d8a5e6e9e,
-    type: 3}
-  FloatForce: 1
-  SpawnAnimationDuration: 0.2
---- !u!114 &-827247870714783397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7408123404780718201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 857e6ba9e00a64d98ba6ff31c130ba0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Time: 2
