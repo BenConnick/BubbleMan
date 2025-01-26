@@ -26,10 +26,10 @@ namespace Platformer.Mechanics
                     color = Color.red;
                     break;
                 case TypeRPS.PaperPurple:
-                    color = Color.yellow;
+                    color = new Color(.8f, 0.2f, .8f);
                     break;
                 case TypeRPS.ScissorsOrange:
-                    color = Color.blue;
+                    color = new Color(.8f, .6f, .2f);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
