@@ -17,7 +17,6 @@ namespace Platformer.Gameplay
             var model = GameController.Instance.model;
             var player = model.player;
             player.collider2d.enabled = true;
-            player.controlEnabled = false;
             if (player.audioSource && player.respawnAudio)
                 player.audioSource.PlayOneShot(player.respawnAudio);
             player.health.Increment();
