@@ -29,7 +29,7 @@ namespace Platformer.Mechanics
                     Debug.Log("Settings");
                     break;
                 case MenuActionType.Credits:
-                    Debug.Log("Credits");
+                    GameController.Instance.LevelLoader.LoadSpecificLevel("Scenes/Levels/Credits");
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();

@@ -15,18 +15,28 @@ namespace Platformer.Mechanics
         
         public void LoadNextLevel()
         {
-            GameController.Instance.StartCoroutine(LoadNextLevelRoutine());
+            CurrentLevel++;
+            GameController.Instance.StartCoroutine(LoadLevelRoutine(CurrentLevel));
         }
 
-        private IEnumerator LoadNextLevelRoutine()
+        private IEnumerator LoadLevelRoutine(int sceneIndex)
         {
-            CurrentLevel++;
-            int nextLevelSceneIndex = CurrentLevel;
-            var asyncOp = SceneManager.LoadSceneAsync(nextLevelSceneIndex, LoadSceneMode.Additive);
+            int prev = SceneManager.GetActiveScene().buildIndex;
+            var asyncOp = SceneManager.LoadSceneAsync(sceneIndex, LoadSceneMode.Additive);
             yield return new WaitUntil(() => asyncOp == null || asyncOp.isDone);
             DoLevelSetup();
-            int prevLevelSceneIndex = CurrentLevel-1; // zero indexed
-            SceneManager.UnloadSceneAsync(prevLevelSceneIndex);
+            SceneManager.UnloadSceneAsync(prev);
+        }
+
+        public void LoadSpecificLevel(string levelName)
+        {
+            int sceneIndex = SceneUtility.GetBuildIndexByScenePath(levelName);
+            if (sceneIndex < 0)
+            {
+                Debug.LogError($"Cannot find scene '{levelName}'");
+                return;
+            }
+            GameController.Instance.StartCoroutine(LoadLevelRoutine(sceneIndex));
         }
 
         private void DoLevelSetup()
