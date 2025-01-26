@@ -39,7 +39,6 @@ namespace Platformer.Gameplay
             player.Teleport(spawnPoint);
             player.jumpState = PlayerController.JumpState.Grounded;
             player.animator.SetBool("dead", false);
-            Simulation.Schedule<EnablePlayerInput>(2f);
         }
     }
 }
