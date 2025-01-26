@@ -26,7 +26,8 @@ namespace Platformer.Mechanics
                     GameController.Instance.LevelLoader.LoadNextLevel();
                     break;
                 case MenuActionType.Settings:
-                    Debug.Log("Credits");
+                    Debug.Log("Settings");
+                    break;
                 case MenuActionType.Credits:
                     Debug.Log("Credits");
                     break;
