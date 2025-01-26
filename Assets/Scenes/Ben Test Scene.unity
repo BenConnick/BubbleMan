@@ -154,74 +154,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &536235456
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 536235459}
-  - component: {fileID: 536235458}
-  - component: {fileID: 536235457}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &536235457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 536235456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &536235458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 536235456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
---- !u!4 &536235459
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 536235456}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &585489440
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -615,6 +547,11 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[6].second.m_TileObjectToInstantiateIndex
       value: 65535
       objectReference: {fileID: 0}
+    - target: {fileID: 3773623875813540765, guid: fbf5cba99360b44649995eb62839bd83,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4535896568468345348, guid: fbf5cba99360b44649995eb62839bd83,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -920,6 +857,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7876416384059830838, guid: fbf5cba99360b44649995eb62839bd83,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7876416384059830838, guid: fbf5cba99360b44649995eb62839bd83,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.4
+      objectReference: {fileID: 0}
     - target: {fileID: 8580426616660781228, guid: fbf5cba99360b44649995eb62839bd83,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1103,23 +1050,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7829328139799608391, guid: 72ae1b901bd934e9b9096960b1a235c5,
         type: 3}
+      propertyPath: orthographic size
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7829328139799608391, guid: 72ae1b901bd934e9b9096960b1a235c5,
+        type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0
+      value: 0.07874016
       objectReference: {fileID: 0}
     - target: {fileID: 7829328139799608391, guid: 72ae1b901bd934e9b9096960b1a235c5,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0
+      value: 0.08041958
       objectReference: {fileID: 0}
     - target: {fileID: 7829328139799608391, guid: 72ae1b901bd934e9b9096960b1a235c5,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 1
+      value: 0.839895
       objectReference: {fileID: 0}
     - target: {fileID: 7829328139799608391, guid: 72ae1b901bd934e9b9096960b1a235c5,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 1
+      value: 0.8391608
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1133,5 +1085,4 @@ SceneRoots:
   - {fileID: 1822724532}
   - {fileID: 421228357}
   - {fileID: 901665981}
-  - {fileID: 536235459}
   - {fileID: 585489440}
