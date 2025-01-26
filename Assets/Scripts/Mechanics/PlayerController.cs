@@ -20,7 +20,9 @@ namespace Platformer.Mechanics
         public AudioClip respawnAudio;
         public AudioClip ouchAudio;
         public AudioClip landAudio;
-        public AudioClip pickupAudio;
+        [FormerlySerializedAs("pickupAudio")]
+        public AudioClip powerupAudio;
+        public AudioClip treasureAudio;
 
         /// <summary>
         /// Max horizontal speed of the player.

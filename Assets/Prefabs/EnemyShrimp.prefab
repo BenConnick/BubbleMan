@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 5843668731025413174}
   - component: {fileID: 5866840539955993949}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: EnemyShrimp
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

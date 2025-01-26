@@ -22,13 +22,13 @@ namespace Platformer.Mechanics
             {
                 case TypeRPS.None:
                     break;
-                case TypeRPS.Rock:
+                case TypeRPS.RockRed:
                     color = Color.red;
                     break;
-                case TypeRPS.Paper:
+                case TypeRPS.PaperPurple:
                     color = Color.yellow;
                     break;
-                case TypeRPS.Scissors:
+                case TypeRPS.ScissorsOrange:
                     color = Color.blue;
                     break;
                 default:
@@ -43,44 +43,44 @@ namespace Platformer.Mechanics
             {
                 case TypeRPS.None:
                     return 0;
-                case TypeRPS.Rock:
+                case TypeRPS.RockRed:
                     switch (b)
                     {
                         case TypeRPS.None:
                             return 0;
-                        case TypeRPS.Rock:
+                        case TypeRPS.RockRed:
                             return 0;
-                        case TypeRPS.Paper:
+                        case TypeRPS.PaperPurple:
                             return -1;
-                        case TypeRPS.Scissors:
+                        case TypeRPS.ScissorsOrange:
                             return 1;
                         default:
                             throw new ArgumentOutOfRangeException(nameof(b), b, null);
                     }
-                case TypeRPS.Paper:
+                case TypeRPS.PaperPurple:
                     switch (b)
                     {
                         case TypeRPS.None:
                             return 0;
-                        case TypeRPS.Rock:
+                        case TypeRPS.RockRed:
                             return 1;
-                        case TypeRPS.Paper:
+                        case TypeRPS.PaperPurple:
                             return 0;
-                        case TypeRPS.Scissors:
+                        case TypeRPS.ScissorsOrange:
                             return -1;
                         default:
                             throw new ArgumentOutOfRangeException(nameof(b), b, null);
                     }
-                case TypeRPS.Scissors:
+                case TypeRPS.ScissorsOrange:
                     switch (b)
                     {
                         case TypeRPS.None:
                             return 0;
-                        case TypeRPS.Rock:
+                        case TypeRPS.RockRed:
                             return -1;
-                        case TypeRPS.Paper:
+                        case TypeRPS.PaperPurple:
                             return 1;
-                        case TypeRPS.Scissors:
+                        case TypeRPS.ScissorsOrange:
                             return 0;
                         default:
                             throw new ArgumentOutOfRangeException(nameof(b), b, null);

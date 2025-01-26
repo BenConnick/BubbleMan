@@ -6,16 +6,16 @@ AnimatorOverrideController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ClamOverrideRed
+  m_Name: CrabOverrideOrange
   m_Controller: {fileID: 9100000, guid: ed1bbb2dccb7a424a9969f916919f446, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: 7400000, guid: 6fbd3b4272fc84993b8317d782d39f77, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 1ce68adeb4d3a4ab38f79bcfea06dc45, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3b521896638334e55897e31fa66385a3, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 1ce68adeb4d3a4ab38f79bcfea06dc45, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 1ce68adeb4d3a4ab38f79bcfea06dc45, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3b521896638334e55897e31fa66385a3, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 8151a21a86e8443db8efcec43314dece, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 1ce68adeb4d3a4ab38f79bcfea06dc45, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3b521896638334e55897e31fa66385a3, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 6d1eca749f9f840299a309e3fd0302af, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 1ce68adeb4d3a4ab38f79bcfea06dc45, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3b521896638334e55897e31fa66385a3, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: a16c2646085174726a41a2900d723bdd, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 1ce68adeb4d3a4ab38f79bcfea06dc45, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3b521896638334e55897e31fa66385a3, type: 2}

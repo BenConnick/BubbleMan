@@ -43,13 +43,13 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 645710997, guid: e6197e486b9af2644a4530bb5ef07271,
+      objectReference: {fileID: 1887827049, guid: e6197e486b9af2644a4530bb5ef07271,
         type: 3}
     - target: {fileID: 1605217082131907960, guid: f158aa2be3df6489185ef721f6fd79c1,
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 22100000, guid: b6e09deddf9f84571a35b15873cb08bf,
+      objectReference: {fileID: 22100000, guid: 778ac879b884e47d1aa0c8a1c130cc8a,
         type: 2}
     - target: {fileID: 1658460978237467174, guid: f158aa2be3df6489185ef721f6fd79c1,
         type: 3}
@@ -148,6 +148,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2088657649121752336}
+    - targetCorrespondingSourceObject: {fileID: 1661912868639658944, guid: f158aa2be3df6489185ef721f6fd79c1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6039859796642535853}
   m_SourcePrefab: {fileID: 100100000, guid: f158aa2be3df6489185ef721f6fd79c1, type: 3}
 --- !u!4 &1525789489571413623 stripped
 Transform:
@@ -178,3 +182,19 @@ MonoBehaviour:
   launchForce: 10
   launchDirection: {x: 1, y: 1}
   offset: {x: 0, y: 1}
+--- !u!114 &6039859796642535853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529241449558149009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a0da40b34c04896ae67be801b0e43f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnimatorsByType:
+  - {fileID: 22100000, guid: b6e09deddf9f84571a35b15873cb08bf, type: 2}
+  - {fileID: 22100000, guid: b6e09deddf9f84571a35b15873cb08bf, type: 2}
+  - {fileID: 22100000, guid: b6e09deddf9f84571a35b15873cb08bf, type: 2}

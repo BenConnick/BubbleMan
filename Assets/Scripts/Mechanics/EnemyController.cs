@@ -25,7 +25,7 @@ namespace Platformer.Mechanics
 
         public Bounds Bounds => _collider.bounds;
 
-        void Awake()
+        protected virtual void Awake()
         {
             EnemyTracker.TrackEnemy(this);
             control = GetComponent<AnimationController>();
@@ -39,7 +39,7 @@ namespace Platformer.Mechanics
             EnemyTracker.OnEnemyDestroyed(this);
         }
 
-        void OnCollisionEnter2D(Collision2D collision)
+        protected virtual void OnCollisionEnter2D(Collision2D collision)
         {
             var player = collision.gameObject.GetComponent<PlayerController>();
             if (player != null)

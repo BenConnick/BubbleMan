@@ -72,8 +72,18 @@ public class BubbleProjectile : MonoBehaviour
         SpawnPop();
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    public virtual void OnCollisionEnter2D(Collision2D collision)
     {
+        var menuController = collision.collider.GetComponentInChildren<MenuButtonEnemy>();
+        if (menuController != null)
+        {
+            var pickup = Instantiate(EnemyPickupPrefab, menuController.transform.position, Quaternion.identity);
+            pickup.GetComponent<EnemyPickup>().SetEnemy(menuController.gameObject);
+            menuController.DoMenuAction();
+            Destroy(gameObject);
+            return;
+        }
+        
         var enemy = collision.collider.GetComponentInChildren<EnemyController>();
         if (enemy != null)
         {
