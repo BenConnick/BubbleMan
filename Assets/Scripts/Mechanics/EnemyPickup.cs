@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Platformer.Core;
+using Platformer.Gameplay;
 using Platformer.Mechanics;
 using UnityEngine;
 
@@ -54,9 +56,11 @@ public class EnemyPickup : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        var player = other.GetComponent<PlayerController>();
+        if (player != null)
         {
             other.GetComponent<RockPaperScissorsComponent>().Value = Type.Value;
+            Simulation.Schedule<PlayerTypeChanged>().player = player;
             Destroy(gameObject); 
         }
     }

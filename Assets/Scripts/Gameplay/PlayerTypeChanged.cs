@@ -4,17 +4,17 @@ using Platformer.Mechanics;
 namespace Platformer.Gameplay
 {
     /// <summary>
-    /// Fired when the player character lands after being airborne.
+    /// Fired when the player picks up an enemy
     /// </summary>
     /// <typeparam name="PlayerLanded"></typeparam>
-    public class PlayerLanded : Simulation.Event<PlayerLanded>
+    public class PlayerTypeChanged : Simulation.Event<PlayerTypeChanged>
     {
         public PlayerController player;
 
         public override void Execute()
         {
-            if (player.audioSource && player.landAudio)
-                player.audioSource.PlayOneShot(player.landAudio);
-        }
+            if (player.audioSource && player.pickupAudio)
+                player.audioSource.PlayOneShot(player.pickupAudio);
+        } 
     }
 }
