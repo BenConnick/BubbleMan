@@ -4750,8 +4750,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[8].m_Data
       value: 
-      objectReference: {fileID: -173088119, guid: de9576bb23253c24eb451b9fb1e1c1f5,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 5790898012506301400, guid: fbf5cba99360b44649995eb62839bd83,
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[9].m_Data
@@ -4806,7 +4805,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[14].m_Data
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: -173088119, guid: de9576bb23253c24eb451b9fb1e1c1f5,
+        type: 3}
     - target: {fileID: 5790898012506301400, guid: fbf5cba99360b44649995eb62839bd83,
         type: 3}
       propertyPath: m_TileColorArray.Array.data[10].m_Data.a
@@ -5570,7 +5570,7 @@ PrefabInstance:
     - target: {fileID: 5790898012506301400, guid: fbf5cba99360b44649995eb62839bd83,
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[8].m_RefCount
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5790898012506301400, guid: fbf5cba99360b44649995eb62839bd83,
         type: 3}
@@ -6965,7 +6965,7 @@ PrefabInstance:
     - target: {fileID: 5790898012506301400, guid: fbf5cba99360b44649995eb62839bd83,
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[14].m_RefCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5790898012506301400, guid: fbf5cba99360b44649995eb62839bd83,
         type: 3}
@@ -13005,7 +13005,7 @@ PrefabInstance:
     - target: {fileID: 5790898012506301400, guid: fbf5cba99360b44649995eb62839bd83,
         type: 3}
       propertyPath: m_Tiles.Array.data[230].second.m_TileSpriteIndex
-      value: 8
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5790898012506301400, guid: fbf5cba99360b44649995eb62839bd83,
         type: 3}
@@ -17744,22 +17744,22 @@ PrefabInstance:
     - target: {fileID: 7829328139799608391, guid: 72ae1b901bd934e9b9096960b1a235c5,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.018072288
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7829328139799608391, guid: 72ae1b901bd934e9b9096960b1a235c5,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.018072288
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7829328139799608391, guid: 72ae1b901bd934e9b9096960b1a235c5,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.9638554
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7829328139799608391, guid: 72ae1b901bd934e9b9096960b1a235c5,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.9638554
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
