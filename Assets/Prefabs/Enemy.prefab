@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 1724124757368974630}
   - component: {fileID: 2651140156555518892}
   - component: {fileID: 772289407653213039}
-  - component: {fileID: 5866840539955993949}
   - component: {fileID: 5843668731025413174}
   m_Layer: 13
   m_Name: Enemy
@@ -208,6 +207,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   path: {fileID: 0}
   ouch: {fileID: 8300000, guid: b7f741588644cd64bbee6387cb54a96d, type: 3}
+
+  canKillByJumpingOn: 0
 --- !u!114 &5866840539955993949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,6 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Value: 3
+
 --- !u!82 &5843668731025413174
 AudioSource:
   m_ObjectHideFlags: 0
