@@ -18,11 +18,13 @@ namespace Platformer.Mechanics
         //through the simulation and events. Unity will deserialize over this
         //shared reference when the scene loads, allowing the model to be
         //conveniently configured inside the inspector.
+        [Header("Child References")]
         public PlatformerModel model;
-
         public EnemyTracker EnemyTracker;
-        
         public LevelSystem LevelLoader;
+
+        [Header("Asset References")]
+        public GameObject EventSystemPrefab;
 
         void OnEnable()
         {
@@ -31,6 +33,7 @@ namespace Platformer.Mechanics
                 Destroy(gameObject);
                 return;
             }
+            Instantiate(EventSystemPrefab, transform);
             Instance = this;
             DontDestroyOnLoad(gameObject);
             LevelLoader ??= new LevelSystem();
