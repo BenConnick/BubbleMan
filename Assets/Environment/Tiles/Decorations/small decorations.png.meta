@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -108,7 +108,217 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: small decorations_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d672f475fce5c34e9421f3ce7e40f41
+      internalID: 664627331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small decorations_1
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 469f096b2e63bef449b055e3067fe098
+      internalID: -893555326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small decorations_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7795cca865890a948b4397cd9b86dcd6
+      internalID: -1350221772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small decorations_3
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6863f6cfbd1863c408d4e3178f25209f
+      internalID: -94337627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small decorations_4
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 273449d1fe0db5c4ab7fd3d207ffb154
+      internalID: 1932125679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small decorations_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 989c31ccd441e624e8e8002d54b00fd7
+      internalID: 1012226331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small decorations_6
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abf32316ba0fcdd43ac66d578afb06f5
+      internalID: 262325830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small decorations_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c4d9f80616ef014da6d56b2b6abca8e
+      internalID: 459746262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small decorations_8
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d017117bb18640645baf881dac369231
+      internalID: -634295687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small decorations_9
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ad58929bfb64747a551a01622bf370
+      internalID: 1689353230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +329,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      small decorations_0: 664627331
+      small decorations_1: -893555326
+      small decorations_2: -1350221772
+      small decorations_3: -94337627
+      small decorations_4: 1932125679
+      small decorations_5: 1012226331
+      small decorations_6: 262325830
+      small decorations_7: 459746262
+      small decorations_8: -634295687
+      small decorations_9: 1689353230
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
