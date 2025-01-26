@@ -60,13 +60,14 @@ MonoBehaviour:
   respawnAudio: {fileID: 8300000, guid: 8c8b81043d7a2468b89a15f8c10028e7, type: 3}
   ouchAudio: {fileID: 8300000, guid: 6c05149e5a2fba64ba172e25a61074b7, type: 3}
   landAudio: {fileID: 8300000, guid: e972bb641e3284a51b61919b31357dba, type: 3}
+  pickupAudio: {fileID: 8300000, guid: c4c9cbc9437704da18fd4630b6d1a0ef, type: 3}
   maxSpeed: 5
   jumpTakeOffSpeed: 10.2
   maxJumpHangDuration: 0.8
   ColorIndicator: {fileID: 5995112325838861950}
   jumpState: 0
   collider2d: {fileID: 8973174470424801648}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 8509783501685719824}
   health: {fileID: 6082575806313374961}
   controlEnabled: 1
   horizontalInertiaInAir: 1
