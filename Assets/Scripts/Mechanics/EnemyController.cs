@@ -59,5 +59,10 @@ namespace Platformer.Mechanics
             }
         }
 
+        // hack to get around some bs
+        public void EnemyTwo()
+        {
+            // don't use this function
+        }
     }
 }
