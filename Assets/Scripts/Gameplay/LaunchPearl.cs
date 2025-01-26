@@ -8,16 +8,6 @@ public class LaunchPearl : MonoBehaviour
     public Vector2 launchDirection = new Vector2(0, 1);
     public Vector2 offset = new Vector2(0, 1);  // Offset above the enemy
     
-    
-    
-    void Update()
-    {
-        if (Input.GetKeyDown("r"))
-        {
-            Launch();
-        }
-    }
-
     void Launch()
     {
         if (prefab != null && launchPoint != null)
@@ -37,5 +27,10 @@ public class LaunchPearl : MonoBehaviour
         {
             Debug.LogError("Launch Pearl needs a launch point and prefab assigned.");
         }
+    }
+
+    public void ClamFire()
+    {
+        Launch();
     }
 }
