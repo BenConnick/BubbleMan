@@ -14,7 +14,6 @@ namespace Platformer.Mechanics
     {
         public PatrolPath path;
         public AudioClip ouch;
-        public bool canKillByJumpingOn;
 
         internal PatrolPath.Mover mover;
         internal AnimationController control;

@@ -20,7 +20,7 @@ namespace Platformer.Gameplay
 
         public override void Execute()
         {
-            var willHurtEnemy = enemy.canKillByJumpingOn && player.Bounds.center.y >= enemy.Bounds.max.y;
+            var willHurtEnemy = player.Bounds.center.y >= enemy.Bounds.max.y;
 
             if (willHurtEnemy)
             {

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Platformer.Gameplay;
@@ -29,7 +28,6 @@ namespace Platformer.Mechanics
         public float jumpTakeOffSpeed = 10;
         public float jumpHangForce = 10;
 
-        public SpriteRenderer ColorIndicator;
         public JumpState jumpState = JumpState.Grounded;
         private bool jumpButtonHeldDown;
         /*internal new*/ public Collider2D collider2d;
@@ -86,29 +84,6 @@ namespace Platformer.Mechanics
             }
             UpdateJumpState();
             base.Update();
-            
-            var typeComp = GetComponent<RockPaperScissorsComponent>();
-            if (typeComp != null && ColorIndicator != null)
-            {
-                Color color = Color.white;
-                switch (typeComp.Value)
-                {
-                    case TypeRPS.None:
-                        break;
-                    case TypeRPS.Rock:
-                        color = Color.red;
-                        break;
-                    case TypeRPS.Paper:
-                        color = Color.yellow;
-                        break;
-                    case TypeRPS.Scissors:
-                        color = Color.blue;
-                        break;
-                    default:
-                        throw new ArgumentOutOfRangeException();
-                }
-                ColorIndicator.color = color;
-            }
         }
 
         void UpdateJumpState()

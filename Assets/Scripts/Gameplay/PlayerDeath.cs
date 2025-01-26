@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Platformer.Core;
-using Platformer.Mechanics;
 using Platformer.Model;
 using UnityEngine;
 
@@ -13,9 +12,10 @@ namespace Platformer.Gameplay
     /// <typeparam name="PlayerDeath"></typeparam>
     public class PlayerDeath : Simulation.Event<PlayerDeath>
     {
+        PlatformerModel model = Simulation.GetModel<PlatformerModel>();
+
         public override void Execute()
         {
-            var model = GameController.Instance.model;
             var player = model.player;
             if (player.health.IsAlive)
             {
