@@ -155,10 +155,11 @@ namespace Platformer.Mechanics
             {
                 if (jumpButtonHeldDown)
                 {
-                    
+                    float gravityAmount = gravityModifier * Physics2D.gravity.y;
+                    float hangPower = -Mathf.Clamp(gravityAmount * jumpHangForce, gravityAmount, gravityAmount*.5f);
+                    if (velocity.y > .75f*jumpTakeOffSpeed)
                     {
-                        float hangPower = Mathf.Clamp(jumpHangForce + velocity.y, 0, jumpHangForce);
-                        velocity.y += hangPower * model.jumpModifier * Time.deltaTime;
+                        velocity.y += hangPower * Time.deltaTime;
                     }
                 }
                 else
