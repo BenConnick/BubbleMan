@@ -5,6 +5,7 @@ using Random = UnityEngine.Random;
 
 public class PlayerShooting : MonoBehaviour
 {
+    private static readonly int ShootProp = Animator.StringToHash("shoot");
     public GameObject bubblePrefab;
     public float bubbleSpeed = 3f;
     public float upwardForce = 2f;
@@ -15,6 +16,9 @@ public class PlayerShooting : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
+            
+            // shoot anim
+            GetComponent<Animator>().SetTrigger(ShootProp);
         } 
     }
 
