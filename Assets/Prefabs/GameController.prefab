@@ -279,8 +279,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model:
-    virtualCamera: {fileID: 0}
-    player: {fileID: 0}
+    virtualCamera: {fileID: 4144589385058664147}
+    player: {fileID: 5516310068760910351}
     spawnPoint: {fileID: 0}
     jumpModifier: 1
     jumpDeceleration: 0
@@ -444,7 +444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ComponentVersion: 1
-  m_AssetsPPU: 32
+  m_AssetsPPU: 16
   m_RefResolutionX: 320
   m_RefResolutionY: 240
   m_CropFrame: 3
@@ -465,7 +465,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.8021093, g: 0.86806047, b: 0.9716981, a: 0}
+  m_BackGroundColor: {r: 0.07849768, g: 0.14757799, b: 0.26415092, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -482,10 +482,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.110662825
-    y: 0.83177567
-    width: 0.4610951
-    height: 0.46728972
+    x: -0.096969694
+    y: 0.42828286
+    width: 0.48484847
+    height: 0.4848485
   near clip plane: 0.1
   far clip plane: 5000
   field of view: 40
@@ -681,6 +681,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d60c822c3f1b408ea7a00ecdb5e047a, type: 3}
+--- !u!114 &5516310068760910351 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114230831923080080, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
+    type: 3}
+  m_PrefabInstance: {fileID: 5555201762413752735}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 709ee11994a2f44658e5fc9887c45081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5550692962565305295 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4520396350849616, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
