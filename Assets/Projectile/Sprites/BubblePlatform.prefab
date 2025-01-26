@@ -8,6 +8,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -827247870714783397, guid: 81ec0ea30aa5c4e50875b0c746f9d6d1,
+        type: 3}
+      propertyPath: Time
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5221622459674116932, guid: 81ec0ea30aa5c4e50875b0c746f9d6d1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -61,7 +66,7 @@ PrefabInstance:
     - target: {fileID: 7408123404780718201, guid: 81ec0ea30aa5c4e50875b0c746f9d6d1,
         type: 3}
       propertyPath: m_Name
-      value: bubblePlatform
+      value: BubblePlatform
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1554545836559730893, guid: 81ec0ea30aa5c4e50875b0c746f9d6d1, type: 3}
