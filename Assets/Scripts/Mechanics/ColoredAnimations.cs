@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Platformer.Mechanics
 {
-    public class TypedAnimation : MonoBehaviour
+    public class ColoredAnimations : MonoBehaviour
     {
         private RockPaperScissorsComponent _Type;
         private Animator _Animator;
