@@ -119,8 +119,6 @@ MonoBehaviour:
     m_RotationOrder: 4
   Sounds: {fileID: 777427374628990108}
   SpawnSound: {fileID: 8300000, guid: e46073a42a88e450abdcd79cd2ccacec, type: 3}
-  PopSound: {fileID: 8300000, guid: 03d0c6263388f45eab051c9a5b2f0b89, type: 3}
-  CaptureSound: {fileID: 8300000, guid: d646f8b47725f4ce0abf64f7a3281738, type: 3}
 --- !u!114 &1554545836559730893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -291,7 +289,8 @@ AudioSource:
   m_GameObject: {fileID: 7408123404780718201}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 7563718226688429844, guid: 628af6cad423c4d378e5b2f20c26aade,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
