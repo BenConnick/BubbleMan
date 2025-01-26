@@ -17268,7 +17268,8 @@ PrefabInstance:
       value: 65535
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3511905843220542617, guid: fbf5cba99360b44649995eb62839bd83, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbf5cba99360b44649995eb62839bd83, type: 3}
@@ -17633,6 +17634,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CreditsEntity
       objectReference: {fileID: 0}
+    - target: {fileID: 1661912868639658944, guid: f158aa2be3df6489185ef721f6fd79c1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -17738,22 +17744,22 @@ PrefabInstance:
     - target: {fileID: 7829328139799608391, guid: 72ae1b901bd934e9b9096960b1a235c5,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.032116786
+      value: 0.11799762
       objectReference: {fileID: 0}
     - target: {fileID: 7829328139799608391, guid: 72ae1b901bd934e9b9096960b1a235c5,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.03307393
+      value: 0.11764706
       objectReference: {fileID: 0}
     - target: {fileID: 7829328139799608391, guid: 72ae1b901bd934e9b9096960b1a235c5,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.9343065
+      value: 0.76281285
       objectReference: {fileID: 0}
     - target: {fileID: 7829328139799608391, guid: 72ae1b901bd934e9b9096960b1a235c5,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.93385214
+      value: 0.76311606
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
