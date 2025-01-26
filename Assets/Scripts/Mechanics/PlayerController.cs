@@ -96,7 +96,7 @@ namespace Platformer.Mechanics
             var typeComp = GetComponent<RockPaperScissorsComponent>();
             if (typeComp != null && ColorIndicator != null)
             {
-                ColorIndicator.color = RockPaperScissorsHelper.GetColor(typeComp.Value);
+                ColorIndicator.color = RockPaperScissorsHelper.GetColor(typeComp.Value.Next());
             }
         }
 

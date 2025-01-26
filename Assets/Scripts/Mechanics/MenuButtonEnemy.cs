@@ -10,7 +10,8 @@ namespace Platformer.Mechanics
         {
             None,
             StartGame,
-            Settings
+            Settings,
+            Credits,
         }
 
         public MenuActionType MenuAction;
@@ -25,7 +26,10 @@ namespace Platformer.Mechanics
                     GameController.Instance.LevelLoader.LoadNextLevel();
                     break;
                 case MenuActionType.Settings:
-                    throw new System.NotImplementedException();
+                    Debug.Log("Credits");
+                case MenuActionType.Credits:
+                    Debug.Log("Credits");
+                    break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }

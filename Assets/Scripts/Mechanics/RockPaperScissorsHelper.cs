@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Platformer.Mechanics
@@ -8,6 +9,25 @@ namespace Platformer.Mechanics
         public static bool Beats(this TypeRPS a, TypeRPS b)
         {
             return Compare(a, b) > 0;
+        }
+
+        public static TypeRPS Next(this TypeRPS a)
+        {
+            switch (a)
+            {
+                case TypeRPS.None:
+                    return TypeRPS.None;
+                case TypeRPS.RockRed:
+                    return TypeRPS.PaperPurple;
+                case TypeRPS.PaperPurple:
+                    return TypeRPS.ScissorsOrange;
+                case TypeRPS.ScissorsOrange:
+                    return TypeRPS.RockRed;
+                case TypeRPS.Yellow:
+                    return TypeRPS.Yellow;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(a), a, null);
+            }
         }
 
         public static Color GetHalfColor(this TypeRPS a)

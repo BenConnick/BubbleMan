@@ -43,7 +43,7 @@ public class PlayerShooting : MonoBehaviour
         var spriteRenderer = bubble.GetComponent<SpriteRenderer>();
         if (spriteRenderer != null)
         {
-            spriteRenderer.color = playerPowerType.GetHalfColor();
+            spriteRenderer.color = playerPowerType.Next().GetHalfColor();
         }
 
         if (rb != null)
