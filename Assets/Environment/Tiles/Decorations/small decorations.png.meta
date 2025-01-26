@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 050fd3400d2f53a488e66e0433de6c63
+guid: c776c2648c4289a49bab3d7b119ab0d1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,118 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: crab_0
+      name: small decorations_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d672f475fce5c34e9421f3ce7e40f41
+      internalID: 664627331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small decorations_1
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 469f096b2e63bef449b055e3067fe098
+      internalID: -893555326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small decorations_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7795cca865890a948b4397cd9b86dcd6
+      internalID: -1350221772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small decorations_3
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6863f6cfbd1863c408d4e3178f25209f
+      internalID: -94337627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small decorations_4
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 273449d1fe0db5c4ab7fd3d207ffb154
+      internalID: 1932125679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small decorations_5
       rect:
         serializedVersion: 2
         x: 0
         y: 72
-        width: 24
-        height: 24
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6a1f9c46c5494990aa71f8a05b9e136
-      internalID: 1716487732
+      spriteID: 989c31ccd441e624e8e8002d54b00fd7
+      internalID: 1012226331
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crab_1
+      name: small decorations_6
       rect:
         serializedVersion: 2
-        x: 24
+        x: 8
         y: 72
-        width: 24
-        height: 24
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,62 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a609df1f87b34cf8b7f2ab35e4d3745
-      internalID: -2035349090
+      spriteID: abf32316ba0fcdd43ac66d578afb06f5
+      internalID: 262325830
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crab_2
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 72
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 39c1091242ad64536b092b3d84eb62f6
-      internalID: 1901612613
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: crab_3
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 72
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 407ea7fb9f4cb4ff4ac59f7eb0d761ad
-      internalID: -1967240094
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: crab_4
+      name: small decorations_7
       rect:
         serializedVersion: 2
         x: 0
-        y: 48
-        width: 24
-        height: 24
+        y: 64
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6042718c7d5d24788aff8165bb43c433
-      internalID: 1584801074
+      spriteID: 2c4d9f80616ef014da6d56b2b6abca8e
+      internalID: 459746262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crab_5
+      name: small decorations_8
       rect:
         serializedVersion: 2
-        x: 24
-        y: 48
-        width: 24
-        height: 24
+        x: 8
+        y: 64
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +292,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15f061dfddbfe40218a6d0180fa7b493
-      internalID: 1312057789
+      spriteID: d017117bb18640645baf881dac369231
+      internalID: -634295687
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crab_6
+      name: small decorations_9
       rect:
         serializedVersion: 2
-        x: 48
-        y: 48
-        width: 24
-        height: 24
+        x: 16
+        y: 64
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,197 +313,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1f6dbd797e854a6d9c94e810c3ffb1a
-      internalID: -1696902326
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: crab_7
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 48
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 73d9b703c9eca43b5a8106a5e1889636
-      internalID: 600021096
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: crab_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 24
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 06b7eb221a80946c594b8248054f6e11
-      internalID: -844880088
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: crab_9
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 24
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0246d3aca26de4ebea47340b32c2e1e6
-      internalID: -1611742305
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: crab_10
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 24
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 243ecef6442364c848ec9ecefff24407
-      internalID: 491956709
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: crab_11
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 24
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a9423f60ea6df4015aed0d4486deb6ca
-      internalID: 1938249277
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: crab_12
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 27633e22a5ca3460094b74bb44b8e0d1
-      internalID: -725493372
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: crab_13
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 0
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 158b1d8a133224616b8b7cd38bb8d262
-      internalID: 516617274
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: crab_14
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3dca069c226f44d10825015094d714b5
-      internalID: -668107756
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: crab_15
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 0
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 03271f5fa6fc3489c9cf1cdf3456fdd9
-      internalID: -271918283
+      spriteID: a1ad58929bfb64747a551a01622bf370
+      internalID: 1689353230
       vertices: []
       indices: 
       edges: []
@@ -456,22 +330,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      crab_0: 1716487732
-      crab_1: -2035349090
-      crab_10: 491956709
-      crab_11: 1938249277
-      crab_12: -725493372
-      crab_13: 516617274
-      crab_14: -668107756
-      crab_15: -271918283
-      crab_2: 1901612613
-      crab_3: -1967240094
-      crab_4: 1584801074
-      crab_5: 1312057789
-      crab_6: -1696902326
-      crab_7: 600021096
-      crab_8: -844880088
-      crab_9: -1611742305
+      small decorations_0: 664627331
+      small decorations_1: -893555326
+      small decorations_2: -1350221772
+      small decorations_3: -94337627
+      small decorations_4: 1932125679
+      small decorations_5: 1012226331
+      small decorations_6: 262325830
+      small decorations_7: 459746262
+      small decorations_8: -634295687
+      small decorations_9: 1689353230
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
