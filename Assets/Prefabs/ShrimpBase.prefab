@@ -17,8 +17,9 @@ GameObject:
   - component: {fileID: 772289407653213039}
   - component: {fileID: 5843668731025413174}
   - component: {fileID: 5866840539955993949}
+  - component: {fileID: 8755034280077496329}
   m_Layer: 0
-  m_Name: EnemyShrimp
+  m_Name: ShrimpBase
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: fe68c6e1242e94a9eab222e1f49440ff, type: 3}
+  m_Sprite: {fileID: 1679874989, guid: 81c57847ee9c602408d2461d2fc3e8d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,7 +102,7 @@ Animator:
   m_GameObject: {fileID: 1661912868639658944}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ed1bbb2dccb7a424a9969f916919f446, type: 2}
+  m_Controller: {fileID: 22100000, guid: 73beafb4e2c854f70a44fae550665965, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -318,3 +319,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Value: 3
+--- !u!114 &8755034280077496329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661912868639658944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a0da40b34c04896ae67be801b0e43f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnimatorsByType:
+  - {fileID: 22100000, guid: 778ac879b884e47d1aa0c8a1c130cc8a, type: 2}
+  - {fileID: 22100000, guid: ab1b8c9a8343b4a7ea4e9d5d3f11b8f5, type: 2}
+  - {fileID: 22100000, guid: 73beafb4e2c854f70a44fae550665965, type: 2}
+  - {fileID: 22100000, guid: 26392808b85d04e6f954bafe665cc8e4, type: 2}
