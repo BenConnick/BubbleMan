@@ -5,7 +5,7 @@ public class LaunchPearl : MonoBehaviour
     public GameObject prefab;
     public Transform launchPoint;
     public float launchForce = 10f;
-    public Vector2 launchDirection = new Vector2(1, 1);
+    public Vector2 launchDirection = new Vector2(0, 1);
     public Vector2 offset = new Vector2(0, 1);  // Offset above the enemy
     
     
