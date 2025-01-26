@@ -36,11 +36,17 @@ public class BubbleProjectile : MonoBehaviour
 
     private IEnumerator PlaySpawnAnimation()
     {
+        Collider2D col = GetComponent<Collider2D>();
+        col.enabled = false;
         float startTime = Time.time;
         float t = 0;
         if (SpawnAnimationDuration == 0) yield break;
         while (t < 1)
         {
+            if (Time.time - startTime > 0.1f)
+            {
+                col.enabled = true;
+            }
             t = (Time.time - startTime) / SpawnAnimationDuration;
             transform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, SpawnAnimationCurve.Evaluate(t));
             yield return null;
