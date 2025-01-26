@@ -59,8 +59,8 @@ MonoBehaviour:
   jumpAudio: {fileID: 8300000, guid: 67975c08d56ceb147bad38572d805aa8, type: 3}
   respawnAudio: {fileID: 8300000, guid: e18959d46b63f3c4c8cc020a433cf848, type: 3}
   ouchAudio: {fileID: 8300000, guid: 6c05149e5a2fba64ba172e25a61074b7, type: 3}
-  maxSpeed: 4
-  jumpTakeOffSpeed: 16
+  maxSpeed: 4.5
+  jumpTakeOffSpeed: 10
   maxJumpHangDuration: 0.8
   ColorIndicator: {fileID: 5995112325838861950}
   jumpState: 0
