@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9062353188895269856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2413313356345081382}
+  m_Layer: 0
+  m_Name: LaunchPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2413313356345081382
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9062353188895269856}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.01, y: 0.35, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1525789489571413623}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &155576556983243857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -107,13 +138,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1658460978237467174, guid: f158aa2be3df6489185ef721f6fd79c1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2413313356345081382}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1661912868639658944, guid: f158aa2be3df6489185ef721f6fd79c1,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2088657649121752336}
   m_SourcePrefab: {fileID: 100100000, guid: f158aa2be3df6489185ef721f6fd79c1, type: 3}
+--- !u!4 &1525789489571413623 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1658460978237467174, guid: f158aa2be3df6489185ef721f6fd79c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 155576556983243857}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1529241449558149009 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1661912868639658944, guid: f158aa2be3df6489185ef721f6fd79c1,
@@ -132,7 +173,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca0a2acd703b641b89144791d7b16436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
-  launchPoint: {fileID: 0}
+  prefab: {fileID: 5975443383732605257, guid: 22ede9c17da4a4ac38ee4c0463b67116, type: 3}
+  launchPoint: {fileID: 2413313356345081382}
   launchForce: 10
   launchDirection: {x: 1, y: 1}
+  offset: {x: 0, y: 1}
