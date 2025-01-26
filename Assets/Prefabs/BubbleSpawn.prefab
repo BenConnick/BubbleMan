@@ -46,4 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Spawn: {fileID: 483989844619809690, guid: 8ba0c2167beb99a4988ff8507186a626, type: 3}
   SpawnOffset: {x: 0, y: 0, z: 0}
-  SpawnInterval: 1.5
+  SpawnInterval: 1.9
