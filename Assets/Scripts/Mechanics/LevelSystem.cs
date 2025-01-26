@@ -39,6 +39,12 @@ namespace Platformer.Mechanics
                 vCam.m_Follow = GameController.Instance.model.player.transform;
                 vCam.m_LookAt = GameController.Instance.model.player.transform;
             }
+            
+            var rps = GameController.Instance.model.player.GetComponent<RockPaperScissorsComponent>();
+            if (rps != null)
+            {
+                rps.Value = TypeRPS.RockRed;
+            }
         }
     }
 }
