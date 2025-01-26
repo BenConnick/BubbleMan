@@ -33,19 +33,17 @@ public class PlayerShooting : MonoBehaviour
         // Apply the velocity to the RigidBody2D
         Rigidbody2D rb = bubble.GetComponent<Rigidbody2D>();
 
+        var playerPowerType = GetComponent<RockPaperScissorsComponent>().Value;
         var typeRPSComp = bubble.GetComponent<RockPaperScissorsComponent>();
         if (typeRPSComp != null)
         {
-            typeRPSComp.Value = GetComponent<RockPaperScissorsComponent>().Value;
+            typeRPSComp.Value = playerPowerType;
         }
         
         var spriteRenderer = bubble.GetComponent<SpriteRenderer>();
         if (spriteRenderer != null)
         {
-            Color c = RockPaperScissorsHelper.GetColor(
-                GetComponent<RockPaperScissorsComponent>().Value);
-            c = Color.Lerp(c, Color.white, 0.45f);
-            spriteRenderer.color = c;
+            spriteRenderer.color = playerPowerType.GetHalfColor();
         }
 
         if (rb != null)

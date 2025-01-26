@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer), typeof(RockPaperScissorsComponent))]
 public class EnemyPickup : MonoBehaviour
 {
+    public SpriteRenderer OuterRenderer;
     public SpriteRenderer InnerRenderer;
     public RockPaperScissorsComponent Type;
     
@@ -45,6 +46,9 @@ public class EnemyPickup : MonoBehaviour
         if (typeHolder != null)
         {
             Type.Value = typeHolder.Value;
+            
+            OuterRenderer ??= GetComponent<SpriteRenderer>();
+            OuterRenderer.color = typeHolder.Value.GetHalfColor();
         }
     }
 

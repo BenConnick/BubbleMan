@@ -10,7 +10,12 @@ namespace Platformer.Mechanics
             return Compare(a, b) > 0;
         }
 
-        public static Color GetColor(TypeRPS a)
+        public static Color GetHalfColor(this TypeRPS a)
+        {
+            return Color.Lerp(Color.white, a.GetColor(), 0.4f);
+        }
+
+        public static Color GetColor(this TypeRPS a)
         {
             Color color = Color.white;
             switch (a)
