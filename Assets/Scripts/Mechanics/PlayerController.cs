@@ -6,6 +6,7 @@ using Platformer.Gameplay;
 using static Platformer.Core.Simulation;
 using Platformer.Model;
 using Platformer.Core;
+using UnityEngine.Serialization;
 
 namespace Platformer.Mechanics
 {
@@ -27,7 +28,7 @@ namespace Platformer.Mechanics
         /// Initial jump velocity at the start of a jump.
         /// </summary>
         public float jumpTakeOffSpeed = 10;
-        public float jumpHangForce = 10;
+        public float maxJumpHangDuration = 0.8f;
 
         public SpriteRenderer ColorIndicator;
         public JumpState jumpState = JumpState.Grounded;
@@ -40,6 +41,7 @@ namespace Platformer.Mechanics
 
         bool jump;
         Vector2 move;
+        private float jumpStartTime;
         SpriteRenderer spriteRenderer;
         internal Animator animator;
         readonly PlatformerModel model = Simulation.GetModel<PlatformerModel>();
@@ -119,6 +121,7 @@ namespace Platformer.Mechanics
                 case JumpState.PrepareToJump:
                     jumpState = JumpState.Jumping;
                     jump = true;
+                    jumpStartTime = Time.time;
                     break;
                 case JumpState.Jumping:
                     if (!IsGrounded)
@@ -155,10 +158,11 @@ namespace Platformer.Mechanics
             {
                 if (jumpButtonHeldDown)
                 {
-                    
+                    float gravityAmount = gravityModifier * Physics2D.gravity.y;
+                    float hangPower = -gravityAmount * .5f;
+                    if (Time.time - jumpStartTime < maxJumpHangDuration)
                     {
-                        float hangPower = Mathf.Clamp(jumpHangForce + velocity.y, 0, jumpHangForce);
-                        velocity.y += hangPower * model.jumpModifier * Time.deltaTime;
+                        velocity.y += hangPower * Time.deltaTime;
                     }
                 }
                 else

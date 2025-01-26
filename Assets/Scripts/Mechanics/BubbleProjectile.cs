@@ -19,8 +19,6 @@ public class BubbleProjectile : MonoBehaviour
 
     public AudioSource Sounds;
     public AudioClip SpawnSound;
-    public AudioClip PopSound;
-    public AudioClip CaptureSound;
 
     private bool _Quit;
     private bool _SuppressDeathFX;
@@ -38,11 +36,17 @@ public class BubbleProjectile : MonoBehaviour
 
     private IEnumerator PlaySpawnAnimation()
     {
+        Collider2D col = GetComponent<Collider2D>();
+        col.enabled = false;
         float startTime = Time.time;
         float t = 0;
         if (SpawnAnimationDuration == 0) yield break;
         while (t < 1)
         {
+            if (Time.time - startTime > 0.1f)
+            {
+                col.enabled = true;
+            }
             t = (Time.time - startTime) / SpawnAnimationDuration;
             transform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, SpawnAnimationCurve.Evaluate(t));
             yield return null;
@@ -80,7 +84,6 @@ public class BubbleProjectile : MonoBehaviour
                 Destroy(enemy.gameObject);
                 var pickup = Instantiate(EnemyPickupPrefab, enemy.transform.position, Quaternion.identity);
                 pickup.GetComponent<EnemyPickup>().SetEnemy(enemy.gameObject);
-                Sounds.PlayOneShot(CaptureSound);
                 _SuppressDeathFX = true;
             }
             Destroy(gameObject);
@@ -91,7 +94,6 @@ public class BubbleProjectile : MonoBehaviour
     {
         if (_SuppressDeathFX) return;
         if (PopVFXPrefab == null) return;
-        Sounds.PlayOneShot(PopSound);
         Instantiate(PopVFXPrefab, transform.position, Quaternion.identity);
     }
 }
