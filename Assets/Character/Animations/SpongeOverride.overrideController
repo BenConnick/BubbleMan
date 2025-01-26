@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SpongeOverride
+  m_Controller: {fileID: 9100000, guid: b09e60546065cf9448b36ebb7f759a91, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: e0e8baec160e44e1bb74ca8e08777453, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a8a5969d05ed0482e815ed5e4428b2a6, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 712f4510fc9b249348d4d8e97b12dc45, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 04ccc4ae7e9d7b241b0120ee689c3c8d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 1d7e02f8cf5ba47a78bc1e19cc378478, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 47c85da026da7544aa120fe64e40e1d9, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 9d77f2a0966c94ef3b13bd6bdac0da40, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5ae2bb64f7cf8a04c825adbd0e83caef, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 56811a918221743d69fe84599f43c740, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b60cdae11dbb7a94da6ae74f3ee446c9, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: f382f645d530b48e2a2137bfbf095647, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 51725887d409d8a48a5cda5098160ac0, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: acd3fdc6781e749908cec8f29cbac75f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7154a2fa1f53f2f44bdbfdf924a2c5bf, type: 2}
