@@ -38,6 +38,11 @@ namespace Platformer.Gameplay
             player.Teleport(spawnPoint);
             player.jumpState = PlayerController.JumpState.Grounded;
             player.animator.SetBool("dead", false);
+            var rps = player.GetComponent<RockPaperScissorsComponent>();
+            if (rps != null)
+            {
+                rps.Value = TypeRPS.RockRed;
+            }
         }
     }
 }
