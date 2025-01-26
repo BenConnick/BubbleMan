@@ -272,6 +272,12 @@ PrefabInstance:
       propertyPath: Value
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8507937816900903112, guid: 5bdd01ba7b868ba4ba6dc86b189c494c,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: c6f6a3e3a2ba9482e996b9bef26509f9,
+        type: 2}
     - target: {fileID: 8594249911439718000, guid: 5bdd01ba7b868ba4ba6dc86b189c494c,
         type: 3}
       propertyPath: m_Name
@@ -538,7 +544,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 22100000, guid: 6ca711940868c4f228ba79196c41865d,
+      objectReference: {fileID: 22100000, guid: 03e3854542a5942f780fe8fd5726e3b9,
         type: 2}
     - target: {fileID: 8594249911439718000, guid: 5bdd01ba7b868ba4ba6dc86b189c494c,
         type: 3}
@@ -618,6 +624,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1472211312728723753, guid: 077763b2f322c4d8ab36210f38998c61,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: e7616be7927974d449ed15cc15c125b9,
+        type: 2}
     - target: {fileID: 1525789489571413623, guid: 077763b2f322c4d8ab36210f38998c61,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -707,6 +719,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1472211312728723753, guid: 077763b2f322c4d8ab36210f38998c61,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: c14722dd712094f399649c5f2c67a692,
+        type: 2}
     - target: {fileID: 1525789489571413623, guid: 077763b2f322c4d8ab36210f38998c61,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -800,7 +818,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 22100000, guid: 03e3854542a5942f780fe8fd5726e3b9,
+      objectReference: {fileID: 22100000, guid: b6e09deddf9f84571a35b15873cb08bf,
         type: 2}
     - target: {fileID: 1525789489571413623, guid: 077763b2f322c4d8ab36210f38998c61,
         type: 3}
@@ -1081,6 +1099,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -725493372, guid: 050fd3400d2f53a488e66e0433de6c63,
         type: 3}
+    - target: {fileID: 8507937816900903112, guid: 5bdd01ba7b868ba4ba6dc86b189c494c,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 34f72aa5b0a1c442fa03a75c0435c605,
+        type: 2}
     - target: {fileID: 8594249911439718000, guid: 5bdd01ba7b868ba4ba6dc86b189c494c,
         type: 3}
       propertyPath: m_Name
