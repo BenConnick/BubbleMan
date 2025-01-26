@@ -21,7 +21,6 @@ public class PlayerShooting : MonoBehaviour
     void Shoot()
     {
         //Determine the direction based on the players direction.
-        Debug.Log(GetComponent<SpriteRenderer>().flipX);
         Vector2 direction = !GetComponent<SpriteRenderer>().flipX ? Vector2.right : Vector2.left;
         
         //Spawn bubble.

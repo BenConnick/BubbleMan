@@ -15,12 +15,20 @@ public class BubbleProjectile : MonoBehaviour
     private Rigidbody2D rb2d;
 
     public float SpawnAnimationDuration = .2f;
+    public AnimationCurve SpawnAnimationCurve;
 
-    private bool Quit;
+    public AudioSource Sounds;
+    public AudioClip SpawnSound;
+    public AudioClip PopSound;
+    public AudioClip CaptureSound;
+
+    private bool _Quit;
+    private bool _SuppressDeathFX;
 
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        Sounds.PlayOneShot(SpawnSound);
     }
 
     private void OnEnable()
@@ -36,7 +44,7 @@ public class BubbleProjectile : MonoBehaviour
         while (t < 1)
         {
             t = (Time.time - startTime) / SpawnAnimationDuration;
-            transform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, t);
+            transform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, SpawnAnimationCurve.Evaluate(t));
             yield return null;
         }
         transform.localScale = Vector3.one;
@@ -51,12 +59,12 @@ public class BubbleProjectile : MonoBehaviour
 
     public void OnApplicationQuit()
     {
-        Quit = true;
+        _Quit = true;
     }
 
     public void OnDestroy()
     {
-        if (Quit || Application.isPlaying == false) return;
+        if (_Quit || Application.isPlaying == false) return;
         SpawnPop();
     }
 
@@ -67,11 +75,13 @@ public class BubbleProjectile : MonoBehaviour
         {
             var projectileType = GetComponent<RockPaperScissorsComponent>().Value;
             var enemyType = enemy.GetComponent<RockPaperScissorsComponent>().Value;
-            if (projectileType.Beats(enemyType))
+            if (projectileType.Beats(enemyType)) // note: enemy wins on tie
             {
                 Destroy(enemy.gameObject);
                 var pickup = Instantiate(EnemyPickupPrefab, enemy.transform.position, Quaternion.identity);
                 pickup.GetComponent<EnemyPickup>().SetEnemy(enemy.gameObject);
+                Sounds.PlayOneShot(CaptureSound);
+                _SuppressDeathFX = true;
             }
             Destroy(gameObject);
         }
@@ -79,7 +89,9 @@ public class BubbleProjectile : MonoBehaviour
 
     private void SpawnPop()
     {
+        if (_SuppressDeathFX) return;
         if (PopVFXPrefab == null) return;
+        Sounds.PlayOneShot(PopSound);
         Instantiate(PopVFXPrefab, transform.position, Quaternion.identity);
     }
 }

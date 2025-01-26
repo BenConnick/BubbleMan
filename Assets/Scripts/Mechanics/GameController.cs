@@ -20,9 +20,22 @@ namespace Platformer.Mechanics
         //conveniently configured inside the inspector.
         public PlatformerModel model;
 
+        public EnemyTracker EnemyTracker;
+        
+        public LevelSystem LevelLoader;
+
         void OnEnable()
         {
+            if (Instance != null)
+            {
+                Destroy(gameObject);
+                return;
+            }
             Instance = this;
+            DontDestroyOnLoad(gameObject);
+            LevelLoader ??= new LevelSystem();
+            EnemyTracker ??= new EnemyTracker();
+            EnemyTracker.EnemiesCleared += LevelLoader.LoadNextLevel;
         }
 
         void OnDisable()

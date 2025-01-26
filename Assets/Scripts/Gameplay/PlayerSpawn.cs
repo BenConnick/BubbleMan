@@ -1,3 +1,4 @@
+using System;
 using Platformer.Core;
 using Platformer.Mechanics;
 using Platformer.Model;
@@ -21,6 +22,19 @@ namespace Platformer.Gameplay
                 player.audioSource.PlayOneShot(player.respawnAudio);
             player.health.Increment();
             Vector3 spawnPoint = Vector3.zero;
+            if (model.spawnPoint == null)
+            {
+                var roots = UnityEngine.SceneManagement.SceneManager.GetActiveScene().GetRootGameObjects();
+                foreach (GameObject rootGameObject in roots)
+                {
+                    Transform root = rootGameObject.transform;
+                    if (string.Equals(root.name, "SpawnPoint", StringComparison.OrdinalIgnoreCase))
+                    {
+                        model.spawnPoint = root;
+                        break;
+                    }
+                }
+            }
             if (model.spawnPoint != null) spawnPoint = model.spawnPoint.position;
             player.Teleport(spawnPoint);
             player.jumpState = PlayerController.JumpState.Grounded;

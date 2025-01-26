@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Platformer.Gameplay;
 using UnityEngine;
@@ -26,10 +27,16 @@ namespace Platformer.Mechanics
 
         void Awake()
         {
+            EnemyTracker.TrackEnemy(this);
             control = GetComponent<AnimationController>();
             _collider = GetComponent<Collider2D>();
             _audio = GetComponent<AudioSource>();
             spriteRenderer = GetComponent<SpriteRenderer>();
+        }
+
+        private void OnDestroy()
+        {
+            EnemyTracker.OnEnemyDestroyed(this);
         }
 
         void OnCollisionEnter2D(Collision2D collision)
