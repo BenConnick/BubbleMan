@@ -92,24 +92,7 @@ namespace Platformer.Mechanics
             var typeComp = GetComponent<RockPaperScissorsComponent>();
             if (typeComp != null && ColorIndicator != null)
             {
-                Color color = Color.white;
-                switch (typeComp.Value)
-                {
-                    case TypeRPS.None:
-                        break;
-                    case TypeRPS.Rock:
-                        color = Color.red;
-                        break;
-                    case TypeRPS.Paper:
-                        color = Color.yellow;
-                        break;
-                    case TypeRPS.Scissors:
-                        color = Color.blue;
-                        break;
-                    default:
-                        throw new ArgumentOutOfRangeException();
-                }
-                ColorIndicator.color = color;
+                ColorIndicator.color = RockPaperScissorsHelper.GetColor(typeComp.Value);
             }
         }
 

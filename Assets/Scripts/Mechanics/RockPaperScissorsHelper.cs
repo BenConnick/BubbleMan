@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 namespace Platformer.Mechanics
 {
@@ -7,6 +8,28 @@ namespace Platformer.Mechanics
         public static bool Beats(this TypeRPS a, TypeRPS b)
         {
             return Compare(a, b) > 0;
+        }
+
+        public static Color GetColor(TypeRPS a)
+        {
+            Color color = Color.white;
+            switch (a)
+            {
+                case TypeRPS.None:
+                    break;
+                case TypeRPS.Rock:
+                    color = Color.red;
+                    break;
+                case TypeRPS.Paper:
+                    color = Color.yellow;
+                    break;
+                case TypeRPS.Scissors:
+                    color = Color.blue;
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+            return color;
         }
         
         public static int Compare(TypeRPS a, TypeRPS b)
@@ -29,7 +52,6 @@ namespace Platformer.Mechanics
                         default:
                             throw new ArgumentOutOfRangeException(nameof(b), b, null);
                     }
-                    break;
                 case TypeRPS.Paper:
                     switch (b)
                     {
@@ -44,7 +66,6 @@ namespace Platformer.Mechanics
                         default:
                             throw new ArgumentOutOfRangeException(nameof(b), b, null);
                     }
-                    break;
                 case TypeRPS.Scissors:
                     switch (b)
                     {
@@ -59,7 +80,6 @@ namespace Platformer.Mechanics
                         default:
                             throw new ArgumentOutOfRangeException(nameof(b), b, null);
                     }
-                    break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(a), a, null);
             }

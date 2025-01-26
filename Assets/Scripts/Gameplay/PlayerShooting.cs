@@ -38,6 +38,15 @@ public class PlayerShooting : MonoBehaviour
         {
             typeRPSComp.Value = GetComponent<RockPaperScissorsComponent>().Value;
         }
+        
+        var spriteRenderer = bubble.GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null)
+        {
+            Color c = RockPaperScissorsHelper.GetColor(
+                GetComponent<RockPaperScissorsComponent>().Value);
+            c = Color.Lerp(c, Color.white, 0.45f);
+            spriteRenderer.color = c;
+        }
 
         if (rb != null)
         {
