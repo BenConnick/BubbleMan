@@ -149,6 +149,12 @@ namespace Platformer.Mechanics
                             currentNormal.x = 0;
                         }
                     }
+
+                    // hit ceiling
+                    if (currentNormal.y < -minGroundNormalY)
+                    {
+                        velocity.y *= .5f;
+                    }
                     if (IsGrounded)
                     {
                         //how much of our velocity aligns with surface normal?
