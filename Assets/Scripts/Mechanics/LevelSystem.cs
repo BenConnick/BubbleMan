@@ -16,6 +16,10 @@ namespace Platformer.Mechanics
         public void LoadNextLevel()
         {
             CurrentLevel++;
+            if (CurrentLevel >= SceneManager.sceneCountInBuildSettings)
+            {
+                CurrentLevel = 0;
+            }
             GameController.Instance.StartCoroutine(LoadLevelRoutine(CurrentLevel));
         }
 
@@ -36,6 +40,7 @@ namespace Platformer.Mechanics
                 Debug.LogError($"Cannot find scene '{levelName}'");
                 return;
             }
+            CurrentLevel = sceneIndex;
             GameController.Instance.StartCoroutine(LoadLevelRoutine(sceneIndex));
         }
 
