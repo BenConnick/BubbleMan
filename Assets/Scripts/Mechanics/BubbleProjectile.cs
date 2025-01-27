@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using Platformer.Core;
 using Platformer.Gameplay;
 using Platformer.Mechanics;
@@ -9,6 +10,20 @@ public class BubbleProjectile : MonoBehaviour
 {
     public GameObject PopVFXPrefab;
     public GameObject EnemyPickupPrefab;
+    public int MaxBubbles = 10;
+    
+    private static readonly List<BubbleProjectile> _Instances = new List<BubbleProjectile>();
+
+    public void Register()
+    {
+        _Instances.Add(this);
+        
+        // limit total bubbles
+        if (_Instances.Count > MaxBubbles)
+        {
+            Destroy(_Instances[0].gameObject);
+        }
+    }
 
     public float FloatForce;
     
@@ -68,6 +83,10 @@ public class BubbleProjectile : MonoBehaviour
 
     public void OnDestroy()
     {
+        if (_Instances.Contains(this))
+        {
+            _Instances.Remove(this);
+        }
         if (_Quit || Application.isPlaying == false) return;
         SpawnPop();
     }

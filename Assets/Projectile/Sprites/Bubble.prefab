@@ -56,6 +56,7 @@ MonoBehaviour:
     type: 3}
   EnemyPickupPrefab: {fileID: 7408123404780718201, guid: 4dbdaff406ed54f3d8ceaf7d8a5e6e9e,
     type: 3}
+  MaxBubbles: 5
   FloatForce: 1
   SpawnAnimationDuration: 1
   SpawnAnimationCurve:
@@ -145,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 857e6ba9e00a64d98ba6ff31c130ba0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Time: 2
+  Time: 3
 --- !u!212 &5887694420492226793
 SpriteRenderer:
   m_ObjectHideFlags: 0

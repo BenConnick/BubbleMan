@@ -54,5 +54,8 @@ public class PlayerShooting : MonoBehaviour
         {
             rb.velocity = bubbleVelocity;
         }
+        
+        // limit total bubbles
+        bubble.GetComponent<BubbleProjectile>().Register();
     }
 }

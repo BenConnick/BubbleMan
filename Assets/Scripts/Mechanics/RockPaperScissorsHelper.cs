@@ -11,6 +11,13 @@ namespace Platformer.Mechanics
             return Compare(a, b) > 0;
         }
 
+        public static TypeRPS GetRPS(this MonoBehaviour comp)
+        {
+            var bubbleType = comp.GetComponent<RockPaperScissorsComponent>();
+            if (bubbleType == null) return TypeRPS.None;
+            return bubbleType.Value;
+        }
+
         public static TypeRPS Next(this TypeRPS a)
         {
             switch (a)
