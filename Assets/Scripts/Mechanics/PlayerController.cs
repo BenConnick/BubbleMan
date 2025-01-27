@@ -43,6 +43,8 @@ namespace Platformer.Mechanics
         public bool controlEnabled = true;
         public float horizontalInertiaInAir = 1;
 
+        public Animator PowerGetEffectAnimator;
+
         bool jump;
         Vector2 move;
         private float jumpStartTime;
@@ -92,12 +94,6 @@ namespace Platformer.Mechanics
             }
             UpdateJumpState();
             base.Update();
-            
-            var typeComp = GetComponent<RockPaperScissorsComponent>();
-            if (typeComp != null && ColorIndicator != null)
-            {
-                ColorIndicator.color = RockPaperScissorsHelper.GetColor(typeComp.Value.Next());
-            }
         }
 
         void UpdateJumpState()
