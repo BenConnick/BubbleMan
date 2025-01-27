@@ -10,7 +10,7 @@ namespace Platformer.Mechanics
     /// AnimationController integrates physics and animation. It is generally used for simple enemy animation.
     /// </summary>
     [RequireComponent(typeof(SpriteRenderer), typeof(Animator))]
-    public class AnimationController : KinematicObject
+    public class EnemyAnimationController : KinematicObject
     {
         /// <summary>
         /// Max horizontal speed.
