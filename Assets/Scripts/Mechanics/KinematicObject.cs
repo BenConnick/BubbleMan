@@ -141,6 +141,7 @@ namespace Platformer.Mechanics
                     if (currentNormal.y > minGroundNormalY)
                     {
                         IsGrounded = true;
+                        velocity.y = 0;
                         // if moving up, change the groundNormal to new surface normal.
                         if (yMovement)
                         {
@@ -151,18 +152,18 @@ namespace Platformer.Mechanics
                     if (IsGrounded)
                     {
                         //how much of our velocity aligns with surface normal?
-                        var projection = Vector2.Dot(velocity, currentNormal);
-                        if (projection < 0)
-                        {
+                        //var projection = Vector2.Dot(velocity, currentNormal);
+                        //if (projection < 0)
+                        //{
                             //slower velocity if moving against the normal (up a hill).
-                            velocity = velocity - projection * currentNormal;
-                        }
+                            //velocity = velocity - projection * currentNormal;
+                        //}
                     }
                     else
                     {
                         //We are airborne, but hit something, so cancel vertical up and horizontal velocity.
-                        velocity.x *= 0;
-                        velocity.y = Mathf.Min(velocity.y, 0);
+                        //velocity.x *= 0;
+                        //velocity.y = Mathf.Min(velocity.y, 0);
                     }
                     //remove shellDistance from actual move distance.
                     var modifiedDistance = hitBuffer[i].distance - shellRadius;
