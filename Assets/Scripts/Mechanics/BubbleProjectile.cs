@@ -9,10 +9,13 @@ using UnityEngine;
 public class BubbleProjectile : MonoBehaviour
 {
     public GameObject PopVFXPrefab;
+    public BubbleCaptureEffect CaptureFXPrefab;
     public GameObject EnemyPickupPrefab;
     public int MaxBubbles = 10;
     
     private static readonly List<BubbleProjectile> _Instances = new List<BubbleProjectile>();
+    
+    private BubbleCaptureEffect _ActiveDenyEffect;
 
     public void Register()
     {
@@ -110,10 +113,17 @@ public class BubbleProjectile : MonoBehaviour
             var enemyType = enemy.GetComponent<RockPaperScissorsComponent>().Value;
             if (projectileType.Beats(enemyType)) // note: enemy wins on tie
             {
+                BubbleCaptureEffect captureEffect = Instantiate(CaptureFXPrefab, transform.position, Quaternion.identity);
+                captureEffect.PlayCaptureAnimation(enemy, transform.position);
                 Destroy(enemy.gameObject);
                 var pickup = Instantiate(EnemyPickupPrefab, enemy.transform.position, Quaternion.identity);
                 pickup.GetComponent<EnemyPickup>().SetEnemy(enemy.gameObject);
                 _SuppressDeathFX = true;
+            }
+            else if (_ActiveDenyEffect == null)
+            {
+                _ActiveDenyEffect = Instantiate(CaptureFXPrefab, transform.position, Quaternion.identity);
+                _ActiveDenyEffect.PlayDenyAnimation(enemy, transform);
             }
             Destroy(gameObject);
         }
