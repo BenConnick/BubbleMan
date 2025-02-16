@@ -12658,6 +12658,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClamBase
       objectReference: {fileID: 0}
+    - target: {fileID: 2088657649121752336, guid: 077763b2f322c4d8ab36210f38998c61,
+        type: 3}
+      propertyPath: launchDirection.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2088657649121752336, guid: 077763b2f322c4d8ab36210f38998c61,
+        type: 3}
+      propertyPath: launchDirection.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5999793536011946252, guid: 077763b2f322c4d8ab36210f38998c61,
         type: 3}
       propertyPath: Value
